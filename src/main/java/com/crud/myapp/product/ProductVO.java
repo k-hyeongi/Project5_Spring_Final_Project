@@ -1,5 +1,7 @@
 package com.crud.myapp.product;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.util.Date;
 
 public class ProductVO {
@@ -9,7 +11,8 @@ public class ProductVO {
     private String code;
     private String category;
     private String name;
-    private boolean isEvent;
+    private String isEvent;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date expdate;
     private Date regdate;
 
@@ -61,13 +64,7 @@ public class ProductVO {
         this.name = name;
     }
 
-    public boolean isEvent() {
-        return isEvent;
-    }
 
-    public void setEvent(boolean event) {
-        isEvent = event;
-    }
 
     public Date getExpdate() {
         return expdate;
@@ -83,5 +80,13 @@ public class ProductVO {
 
     public void setRegdate(Date regdate) {
         this.regdate = regdate;
+    }
+
+    public String getIsEvent() {
+        return isEvent;
+    }
+
+    public void setIsEvent(String isEvent) {
+        this.isEvent = isEvent;
     }
 }

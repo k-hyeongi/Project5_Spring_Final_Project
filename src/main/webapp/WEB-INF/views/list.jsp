@@ -7,7 +7,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <title>free board</title>
+    <title>재고 관리 시스템</title>
     <script>
         function delete_ok(id) {
             const a = confirm("정말로 삭제하겠습니까?");
@@ -21,11 +21,11 @@
 <div class="container">
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
         <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-            <span class="fs-4">자유게시판</span>
+            <span class="fs-4">CU 재고 관리 목록</span>
         </a>
 
         <ul class="nav nav-pills">
-            <li class="nav-item"><a href="#" class="nav-link" aria-current="page">Home</a></li>
+            <li class="nav-item"><span class="nav-link text-success">${sessionScope.login.username} 님</span></li>
             <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
             <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
             <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
@@ -42,8 +42,9 @@
         <th>Price</th>
         <th>Amount</th>
 <%--        <th>isEvent</th>--%>
-        <th>ExpDate</th>
-        <th>RegDate</th>
+성        <th>RegDate</th>
+        <th>Detail</th>
+        <th>Edit</th>
         <th>Delete</th>
     </tr>
     <c:forEach items="${list}" var="u" varStatus="status">

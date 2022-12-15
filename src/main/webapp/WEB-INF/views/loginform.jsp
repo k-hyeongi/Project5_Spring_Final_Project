@@ -14,7 +14,7 @@
 </head>
 <body>
     <div class="container text-center">
-        <img src="../img/pngegg.png" width="240" alt="" />
+        <img src="../img/CU.png" width="240" alt="" />
         <form method="post" action="loginOk">
             <div class="form-floating mb-3">
                 <input type="text" name="userid" class="form-control" id="floatingInput" placeholder="ID">

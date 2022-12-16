@@ -28,38 +28,51 @@
         </ul>
     </header>
     <form action="addok" method="post">
-        <table class="table" id="list">
+        <table class="table table-bordered" id="list">
             <tr>
                 <th>이름</th>
-                <td><input type="text" name="name"/></td>
+                <td><input type="text" class="form-control" name="name"/></td>
             </tr>
             <tr>
                 <th>물품코드</th>
-                <td><input type="text" name="code"/></td>
+                <td><input type="text" class="form-control" name="code"/></td>
             </tr>
             <tr>
                 <th>카테고리</th>
-                <td><input type="text" name="category"/></td>
+                <td>
+                    <select class="form-select form-select-sm" name="category">
+                        <option selected>카테고리를 선택하세요</option>
+                        <option>식사류</option>
+                        <option>간식류</option>
+                        <option>생필품</option>
+                        <option>기타</option>
+                    </select>
+                </td>
             </tr>
             <tr>
                 <th>가격</th>
-                <td><input type="text" name="price"/></td>
+                <td><input type="text" class="form-control" name="price"/></td>
             </tr>
             <tr>
                 <th>수량</th>
-                <td><input type="text" name="amount"/></td>
+                <td><input type="text" class="form-control" name="amount"/></td>
             </tr>
             <tr>
                 <th>세일율(%)</th>
-                <td><input type="text" name="sale"/>
+                <td>
+                    <input type="range" class="form-range" min="0" max="100" step="5" name="sale" value="0" oninput="document.getElementById('saleVal').innerHTML=this.value;"/>
+                    <span id="saleVal"></span>
+                </td>
             </tr>
             <tr>
                 <th>유통기한</th>
-                <td><input type="date" name="expdate"/></td>
+                <td><input type="date" class="form-control" name="expdate"/></td>
             </tr>
         </table>
+        <div class="d-grid mb-3">
+            <button class="btn" style="background-color: rgb(179, 206, 82)!important; color: white;" type="submit">작성하기</button>
+        </div>
         <button class=" btn btn-success" type="button" onclick="location.href='list'">목록 보기</button>
-        <button class=" btn btn-success" type="submit">작성하기</button>
     </form>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"

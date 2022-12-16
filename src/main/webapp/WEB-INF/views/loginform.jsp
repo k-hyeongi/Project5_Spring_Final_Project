@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login Page</title>
+    <title>CU 로그인</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 <body>
@@ -25,7 +25,7 @@
                 <label for="floatingPassword">USER PW</label>
             </div>
             <div class="d-grid">
-                <button type="submit" class="btn btn-success">LOGIN</button>
+                <button type="submit" class="btn" style="background-color: rgb(179, 206, 82)!important; color: white;">LOGIN</button>
             </div>
         </form>
     </div>

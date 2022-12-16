@@ -25,11 +25,22 @@
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
-    background-color: #006bb3;
+    background-color: rgb(179, 206, 82);
     color: white;
 }
 button {
-    background-color: #006bb3 !important;
+    background-color: rgb(179, 206, 82) !important;
     color: white !important;
 }
 
+#delete {
+    color: red!important;
+}
+
+#edit {
+    color: blue!important;
+}
+
+#detail {
+    color: black!important;
+}

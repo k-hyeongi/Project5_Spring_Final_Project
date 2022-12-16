@@ -29,37 +29,48 @@
     </header>
 <form:form action="../editok" method="post" modelAttribute="productVO">
     <form:hidden path="seq" />
-    <table class="table" id="list">
+    <table class="table table-bordered" id="list">
         <tr>
             <th>이름</th>
-            <td><form:input path="name" /></td>
+            <td><form:input cssClass="form-control" path="name" /></td>
         </tr>
         <tr>
             <th>물품코드</th>
-            <td><form:input path="code" /></td>
-        </tr>
+            <td><form:input cssClass="form-control" path="code" /></td>
         <tr>
             <th>카테고리</th>
-            <td><form:input path="category" /></td>
+            <td>
+                <form:select cssClass="form-select form-select-sm" path="category">
+                    <option>카테고리를 선택하세요</option>
+                    <option>식사류</option>
+                    <option>간식류</option>
+                    <option>생필품</option>
+                    <option>기타</option>
+                </form:select>
+            </td>
         </tr>
         <tr>
             <th>가격</th>
-            <td><form:input path="price" /></td>
+            <td><form:input cssClass="form-control" path="price" /></td>
         </tr>
         <tr>
             <th>수량</th>
-            <td><form:input path="amount" /></td>
+            <td><form:input cssClass="form-control" path="amount" /></td>
         </tr>
         <tr>
             <th>세일율(%)</th>
-            <td><form:input path="sale" /></td>
+            <td>
+                <form:input cssClass="form-control" path="sale" />
+            </td>
         </tr>
         <tr>
             <th>유통기한</th>
-            <td><form:input path="expdate" /></td>
+            <td><form:input cssClass="form-control" path="expdate" /></td>
         </tr>
     </table>
-    <button type="submit" class="btn btn-success">수정하기</button>
+    <div class="d-grid mb-3">
+        <button type="submit" style="background-color: rgb(179, 206, 82)!important; color: white;" class="btn">수정하기</button>
+    </div>
     <button type="button" class="btn btn-warning" onclick="history.back()">취소하기</button>
     </div>
 </form:form>

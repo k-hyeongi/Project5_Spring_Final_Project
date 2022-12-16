@@ -27,7 +27,7 @@
             <li class="nav-item"><a href="#" class="nav-link">About</a></li>
         </ul>
     </header>
-<form:form action="../editok" method="post" modelAttribute="ProductVO">
+<form:form action="../editok" method="post" modelAttribute="productVO">
     <form:hidden path="seq" />
     <table class="table" id="list">
         <tr>
@@ -44,19 +44,19 @@
         </tr>
         <tr>
             <th>가격</th>
-            <td><form:textarea path="price" /></td>
+            <td><form:input path="price" /></td>
         </tr>
         <tr>
             <th>수량</th>
-            <td><form:textarea path="amount" /></td>
+            <td><form:input path="amount" /></td>
         </tr>
         <tr>
-            <th>이벤트여부</th>
-            <td><form:textarea path="isEvent" /></td>
+            <th>세일율(%)</th>
+            <td><form:input path="sale" /></td>
         </tr>
         <tr>
             <th>유통기한</th>
-            <td><form:textarea path="expdate" /></td>
+            <td><form:input path="expdate" /></td>
         </tr>
     </table>
     <button type="submit" class="btn btn-success">수정하기</button>

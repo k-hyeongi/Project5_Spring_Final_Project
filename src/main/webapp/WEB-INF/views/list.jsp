@@ -36,16 +36,17 @@
     <tr>
         <th>No</th>
         <th>Id</th>
-        <th>Name</th>
-        <th>Code</th>
-        <th>Category</th>
-        <th>Price</th>
-        <th>Amount</th>
-<%--        <th>isEvent</th>--%>
-성        <th>RegDate</th>
-        <th>Detail</th>
-        <th>Edit</th>
-        <th>Delete</th>
+        <th>상품명</th>
+        <th>상품코드</th>
+        <th>분류</th>
+        <th>가격</th>
+        <th>수량</th>
+        <th>세일율(%)</th>
+        <th>유통기한</th>
+        <th>등록일</th>
+        <th>상세보기</th>
+        <th>편집</th>
+        <th>삭제</th>
     </tr>
     <c:forEach items="${list}" var="u" varStatus="status">
         <tr>
@@ -56,7 +57,7 @@
             <td>${u.category}</td>
             <td>${u.price}</td>
             <td>${u.amount}</td>
-<%--            <td>${u.isevent}</td>--%>
+            <td>${u.sale}</td>
             <td>${u.expdate}</td>
             <td>${u.regdate}</td>
             <td><a href="viewpost/${u.seq}">Detail</a></td>

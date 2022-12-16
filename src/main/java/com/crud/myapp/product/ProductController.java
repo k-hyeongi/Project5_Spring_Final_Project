@@ -37,14 +37,14 @@ public class ProductController {
     @RequestMapping(value = "/editpost/{id}", method = RequestMethod.GET)
     public String editPost(@PathVariable("id") int id, Model model) {
         ProductVO ProductVO = ProductService.getProduct(id);
-        model.addAttribute("ProductVO", ProductVO);
+        model.addAttribute("productVO", ProductVO);
         return "editform";
     }
 
     @RequestMapping(value = "/viewpost/{id}", method = RequestMethod.GET)
     public String viewPost(@PathVariable("id") int id, Model model) {
         ProductVO ProductVO = ProductService.getProduct(id);
-        model.addAttribute("ProductVO", ProductVO);
+        model.addAttribute("productVO", ProductVO);
         return "view";
     }
 

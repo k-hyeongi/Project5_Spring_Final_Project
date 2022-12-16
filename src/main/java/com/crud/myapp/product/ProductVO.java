@@ -11,7 +11,7 @@ public class ProductVO {
     private String code;
     private String category;
     private String name;
-    private String isEvent;
+    private int sale;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date expdate;
     private Date regdate;
@@ -64,8 +64,6 @@ public class ProductVO {
         this.name = name;
     }
 
-
-
     public Date getExpdate() {
         return expdate;
     }
@@ -82,11 +80,11 @@ public class ProductVO {
         this.regdate = regdate;
     }
 
-    public String getIsEvent() {
-        return isEvent;
+    public int getSale() {
+        return sale;
     }
 
-    public void setIsEvent(String isEvent) {
-        this.isEvent = isEvent;
+    public void setSale(int sale) {
+        this.sale = sale;
     }
 }

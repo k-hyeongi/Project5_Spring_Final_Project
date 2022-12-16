@@ -16,7 +16,7 @@
 <div class="container">
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
         <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-            <span class="fs-4">새 포스트 작성</span>
+            <span class="fs-4">새 상품 등록</span>
         </a>
 
         <ul class="nav nav-pills">
@@ -50,18 +50,13 @@
                 <td><input type="text" name="amount"/></td>
             </tr>
             <tr>
-                <th>이벤트여부</th>
-                <td><input type="radio" name="isEvent" value="true"/>True
-                <input type="radio" name="isEvent" value="false"/>False</td>
+                <th>세일율(%)</th>
+                <td><input type="text" name="sale"/>
             </tr>
             <tr>
                 <th>유통기한</th>
                 <td><input type="date" name="expdate"/></td>
             </tr>
-<%--            <tr>--%>
-<%--                <th>내용</th>--%>
-<%--                <td><textarea cols="50" rows="5" name="content"></textarea></td>--%>
-<%--            </tr>--%>
         </table>
         <button class=" btn btn-success" type="button" onclick="location.href='list'">목록 보기</button>
         <button class=" btn btn-success" type="submit">작성하기</button>

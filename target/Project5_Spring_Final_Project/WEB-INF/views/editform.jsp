@@ -40,13 +40,7 @@
         <tr>
             <th>카테고리</th>
             <td>
-                <form:select cssClass="form-select form-select-sm" path="category">
-                    <option>카테고리를 선택하세요</option>
-                    <option>식사류</option>
-                    <option>간식류</option>
-                    <option>생필품</option>
-                    <option>기타</option>
-                </form:select>
+                <form:input cssClass="form-control" path="category" />
             </td>
         </tr>
         <tr>

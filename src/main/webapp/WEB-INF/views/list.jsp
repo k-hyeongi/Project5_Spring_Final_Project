@@ -2,6 +2,7 @@
          pageEncoding="UTF-8" isELIgnored="false" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <c:set var="path" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html>
 <html>
@@ -43,7 +44,6 @@
         <th>수량</th>
         <th>세일율(%)</th>
         <th>유통기한</th>
-        <th>등록일</th>
         <th>상세보기</th>
         <th>편집</th>
         <th>삭제</th>
@@ -58,8 +58,7 @@
             <td>${u.price}</td>
             <td>${u.amount}</td>
             <td>${u.sale}</td>
-            <td>${u.expdate}</td>
-            <td>${u.regdate}</td>
+            <td><fmt:formatDate pattern="yyyy-MM-dd" value="${u.expdate}" /></td>
             <td><a href="viewpost/${u.seq}">Detail</a></td>
             <td><a href="editpost/${u.seq}">Edit</a></td>
             <td><a href="javascript:delete_ok('${u.seq}')">Delete</a></td>
